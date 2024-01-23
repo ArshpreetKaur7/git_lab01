@@ -49,9 +49,23 @@
 				background-color: pink;
 			}
 			</style>
+			 <script>
+        function validateForm() {
+          
+            var email = document.forms["registrationForm"]["email"].value;
+      
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 	</head>
 <body>
-	<form>
+	<form  name="registrationForm" onsubmit="return validateForm()">
    
    
 
