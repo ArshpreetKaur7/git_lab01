@@ -1,11 +1,61 @@
 <html>
 	<head>
 		<title> Registration Form</title>
+		<style>
+		body {
+				font-family: Arial, sans-serif;
+				background-color: lavenderblush;
+				margin: 0;
+				padding: 0;
+			}
+
+			form {
+				width: 50%;
+				margin: 50px auto;
+				background: white;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			fieldset {
+				border: 2px solid #333;
+				border-radius: 5px;
+				padding: 10px;
+			}
+
+			legend {
+				font-size: 1.5em;
+				font-weight: bold;
+				color: black;
+			}
+
+			h1 {
+				margin: 0;
+				padding: 0;
+			}
+
+			p {
+				margin-bottom: 15px;
+			}
+
+			.login-input {
+				width: 100%;
+				padding: 8px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+			input[type="submit"]:hover {
+				background-color: pink;
+			}
+			</style>
 	</head>
 <body>
 	<form>
 
+
                   <fieldset> <legend><h1>Join us!</h1></legend>
+
                 <p><strong> First Name: </strong> <br>
                     <input class="login-input" type="text" name="firstname" size="45" ><br>     
                 </p>
@@ -17,8 +67,7 @@
                     <input class="login-input" type="text" name="email" size="45" >
                     <br>
                 </p>
-	
-          
+
                
                 <p><strong>Password </strong><br> 
                     <input class="login-input" type="password" name="password" size="45"> 
@@ -35,8 +84,8 @@
             </fieldset>
        
 
-
         </form>
+
 
 </body>
 </html>
