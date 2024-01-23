@@ -49,17 +49,33 @@
 				background-color: pink;
 			}
 			</style>
+			 <script>
+        function validateForm() {
+          
+            var email = document.forms["registrationForm"]["email"].value;
+      
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 	</head>
 <body>
-	<form>
+
+	<form  name="registrationForm" onsubmit="return validateForm()">
+   
+   
 
 	
-
-
-                  <fieldset> <legend><h1>Join us!</h1></legend>
+            <fieldset> <legend><h1>Join us!</h1></legend>
 
                 <p><strong> First Name: </strong> <br>
-                    <input class="login-input" type="text" name="firstname" size="45" ><br>     
+                    <input class="login-input" type="text" name="firstname" size="45" required><br>     
+
 
                 </p>
                 <p><strong> Last Name: </strong><br>
@@ -71,7 +87,6 @@
                     <br>
                 </p>
 
-               
                 <p><strong>Password </strong><br> 
                     <input class="login-input" type="password" name="password" size="45" required> 
                     <br> 
@@ -98,5 +113,6 @@
        
 
         </form>
+
 </body>
 </html>
